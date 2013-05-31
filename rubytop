@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative 'lib/rubytop'
+
+# rubytop
+#
+# Monitors object creation/memory usage of jruby applications over time
+#
+
+$LOAD_PATH.unshift(File.dirname(__FILE__) + "/lib")
+
+require "bundler/setup"
+require "rubytop"
+
+Rubytop.new.run
